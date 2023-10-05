@@ -22,7 +22,6 @@ jobs:
           submodules: true
       - run: sudo apt-get update
       - run: sudo apt-get install build-essential cmake -y
-      - run: sudo apt-get install 
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }}
       - run: cmake --build .
       - run: cmake --build . --target package
